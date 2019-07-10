@@ -1,0 +1,8 @@
+// 日志文件
+logs/
+
+// 依赖文件
+node_modules/
+
+// electron打包文件
+out/

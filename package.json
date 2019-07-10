@@ -1,0 +1,20 @@
+{
+  "name": "initdevice",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ./src",
+    "debug": "electron ./src --debug",
+    "build:win32": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --app-version=1.0.0",
+    "build:win32asar": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --asar --app-version=1.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "log4js": "^4.4.0"
+  },
+  "devDependencies": {
+    "electron": "^5.0.6",
+    "electron-packager": "^14.0.1"
+  }
+}
