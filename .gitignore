@@ -6,3 +6,6 @@ node_modules/
 
 // electron打包文件
 out/
+
+// yarn-error
+yarn-error.log

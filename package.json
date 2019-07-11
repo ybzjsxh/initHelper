@@ -1,13 +1,14 @@
 {
   "name": "initdevice",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "electron ./",
     "debug": "electron ./ --debug",
     "build:win32": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --app-version=1.0.0",
-    "build:win32asar": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --asar --app-version=1.0.0"
+    "build:win32asar": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --asar.unpack='**/config/config.js' --app-version=1.0.0",
+    "build:win32asar_x86": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=ia32 --icon=src/static/Logo.ico --out=./out --asar.unpack='**/config/config.js' --app-version=1.0.0"
   },
   "dependencies": {
     "axios": "^0.19.0",

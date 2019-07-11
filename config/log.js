@@ -7,12 +7,12 @@ log4js.configure({
     req: {
       type: 'dateFile',
       pattern: '-yyyy-MM-dd.log',
-      filename: path.join(__dirname, '../logs/req/', 'req.log')
+      filename: './logs/req/req.log'
     },
     err: {
       type: 'dateFile',
       pattern: '-yyyy-MM-dd.log',
-      filename: path.join(__dirname, '../logs/errors/', 'err.log')
+      filename: './logs/errors/err.log'
     },
     oth: {
       type: 'console'

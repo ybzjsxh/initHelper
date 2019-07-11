@@ -53,12 +53,12 @@ const register =  async deviceNick => {
       deviceType,
       deviceNick,
       deviceMac,
-      deviceNo,
+      // deviceNo,
       corpId
     }
   })
   .then(res => {
-    console.log(res);
+    // console.log(res);
     if(res.code == 200) {
       reqLogger.info(res)
       alert('注册成功！');
