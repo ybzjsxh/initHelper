@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  color: #fff;
+  background: url('../img/3.png') no-repeat;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+select, option {
+  color: #000;
+}
+
+input {
+  margin: 10px;
+  /* background-color: #eee; */
+  /* border: none; */
+  height: 20px;
+}
+
+/* input::-webkit-input-placeholder {
+  color: #fff;
+} */
+
+input:focus {
+  /* color: #fff; */
+  outline: none;
+}
+
+button {
+  background: #fff;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #000;
+}
+
+footer {
+  clear: both;
+  display: block;
+  text-align: center;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -5,37 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>initdevice</title>
-  <style>
-    * {
-      color: #fff;
-    }
-    select, option {
-      color: #000;
-    }
-    button {
-      background: #fff;
-      width: 100px;
-      height: 40px;
-      border: none;
-      color: #000;
-    }
-    footer {
-      clear: both;
-      display: block;
-      text-align: center;
-      margin: 0px auto;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css" />
   <script src="./index.js"></script>
 </head>
 <body>
-  <h1 style="-webkit-app-region: drag; text-align: center; font-weight: bold">设备注册助手</h1>
+  <h1 style="-webkit-app-region: drag; text-align: center; font-weight: bold; margin-top: 80px">设备注册助手</h1>
   <div style="text-align: center;">
     <div>
-      设备名称：<input type="text" id="name" />
+      设备名称：<input type="text" id="name" placeholder="请输入将要注册的设备名称" />
     </div>
     <button onclick="submit();">注册</button>
     <button onclick="quit()">退出</button>
@@ -45,8 +22,8 @@
     function submit () {
       let name = document.getElementById('name');
       let deviceNick = name.value;
-      console.log(deviceNick);
-      register(name)
+      console.log(deviceNick, typeof deviceNick, deviceNick instanceof Object);
+      register(deviceNick)
     }
   </script>
 </body>

@@ -10,11 +10,14 @@ const { server, corpId, deviceNo, deviceType, debug } = config
 
 const createWindow = () => {
   let win = new BrowserWindow({
-    width: 800,
+    width: 350,
     height: 600,
+    title: '设备注册助手',
     backgroundColor: '#5094ff',
-    transparent: true,
-    frame: false,
+    center: true, // 窗口居中
+    frame: false, // 是否有边框
+    resizable: false, // 是否允许修改窗口大小
+    hasShadow: true,
     webPreferences: {
       nodeIntegration: true
     }
@@ -76,6 +79,7 @@ app.on('ready', createWindow)
 ipcMain.on('quit', (e, arg) => {
   app.quit()
 })
+
 function quit () {
   ipcRenderer.send('quit')
 }
