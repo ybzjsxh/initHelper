@@ -29,13 +29,26 @@ input:focus {
 }
 
 button {
-  background: #fff;
   width: 100px;
   height: 40px;
-  border: none;
-  color: #000;
   border-radius: 3px;
   margin: 100px 10px;
+}
+
+#submit {
+  color: #fff;
+  border: none;
+  background-color: rgb(28, 189, 28);
+}
+
+#submit:focus {
+  border: none;
+}
+
+#quit {
+  color: #fff;
+  border: none;
+  background-color: rgb(255, 0, 0);
 }
 
 footer {
