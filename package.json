@@ -6,10 +6,11 @@
   "scripts": {
     "start": "electron ./",
     "debug": "electron ./ --debug",
-    "build:win32": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --app-version=0.0.1",
-    "build:win32asar": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./out --asar.unpack='**/config/config.js' --app-version=0.0.1",
-    "build:win32asar_x86": "rm -rf out && electron-packager ./ 设备注册助手 --platform=win32 --arch=ia32 --icon=src/static/Logo.ico --out=./out --asar.unpack='**/config/config.js' --app-version=0.0.1",
-    "build:linux": "rm -rf out && electron-packager ./ 设备注册助手 --platform=linux --arch=x64 --icon=src/static/Logo.ico --out=./out --asar.unpack='**/config/config.js' --app-version=0.0.1"
+    "test": "jest",
+    "build:win32": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --app-version=0.0.1",
+    "build:win32asar": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:win32asar_x86": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=ia32 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:linux": "electron-packager ./ 设备注册助手 --overwrite --platform=linux --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -17,6 +18,10 @@
   },
   "devDependencies": {
     "electron": "^5.0.6",
-    "electron-packager": "^14.0.1"
+    "electron-packager": "^14.0.1",
+    "jest": "^24.8.0"
+  },
+  "jest": {
+    "testRegex": ".*.(test|spec).jsx?$"
   }
 }

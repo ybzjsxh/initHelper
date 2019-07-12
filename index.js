@@ -17,17 +17,19 @@ const createWindow = () => {
     center: true, // 窗口居中
     frame: false, // 是否有边框
     resizable: false, // 是否允许修改窗口大小
-    hasShadow: true,
+    hasShadow: true, // 是否显示阴影仅mac有效
     webPreferences: {
       nodeIntegration: true
     }
   })
   win.loadFile('./index.html');
   if(debug) {
-    win.webContents.openDevTools();
+    win.webContents.openDevTools(); // 是否打开devtools
   }
 }
 
+
+// TODO: 获取mac有bug即将删除
 const get_host_ip_mac = () => {
   add = os.networkInterfaces();
   for (var devName in add) {
@@ -45,6 +47,10 @@ const get_host_ip_mac = () => {
   }
 }
 
+/**
+ * 
+ * @param {*} deviceNick 
+ */
 const register =  async deviceNick => {
 	let deviceMac = get_host_ip_mac().mac;
 	// console.log(mac, deviceNo);
