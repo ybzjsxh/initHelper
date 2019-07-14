@@ -7,9 +7,11 @@
     "start": "electron ./",
     "debug": "electron ./ --debug",
     "test": "jest",
+    "build": "gulp",
     "build:win32": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --app-version=0.0.1",
     "build:win32asar": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
     "build:win32asar_x86": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=ia32 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:mac": "electron-packager ./ 设备注册助手 --overwrite --platform=darwin --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
     "build:linux": "electron-packager ./ 设备注册助手 --overwrite --platform=linux --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1"
   },
   "dependencies": {
@@ -17,8 +19,16 @@
     "log4js": "^4.4.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.5.4",
     "electron": "^5.0.6",
     "electron-packager": "^14.0.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-load-plugins": "^2.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
     "jest": "^24.8.0"
   },
   "jest": {

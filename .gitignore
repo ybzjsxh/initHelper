@@ -9,3 +9,6 @@ out/
 
 // yarn-error
 yarn-error.log
+
+// gulp build文件
+build/
