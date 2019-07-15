@@ -5,7 +5,7 @@ logs/
 node_modules/
 
 // electron打包文件
-out/
+release/
 
 // yarn-error
 yarn-error.log

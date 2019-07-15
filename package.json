@@ -8,18 +8,20 @@
     "debug": "electron ./ --debug",
     "test": "jest",
     "build": "gulp",
-    "build:win32": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --app-version=0.0.1",
-    "build:win32asar": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
-    "build:win32asar_x86": "electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=ia32 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
-    "build:mac": "electron-packager ./ 设备注册助手 --overwrite --platform=darwin --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
-    "build:linux": "electron-packager ./ 设备注册助手 --overwrite --platform=linux --arch=x64 --icon=src/static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1"
+    "build:win32": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=./static/Logo.ico --out=./release --app-version=0.0.1",
+    "build:win32asar": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=x64 --icon=./static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:win32asar_x86": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=win32 --arch=ia32 --icon=./static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:mac": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=darwin --arch=x64 --icon=./static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1",
+    "build:linux": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=linux --arch=x64 --icon=./static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.4",
     "axios": "^0.19.0",
     "log4js": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
     "@babel/preset-env": "^7.5.4",
     "electron": "^5.0.6",
     "electron-packager": "^14.0.1",

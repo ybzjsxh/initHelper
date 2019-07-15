@@ -29,12 +29,11 @@ const createWindow = () => {
 }
 
 
-// TODO: 获取mac有bug即将删除
 const get_host_ip_mac = () => {
-  add = os.networkInterfaces();
+  let add = os.networkInterfaces();
   for (var devName in add) {
     // console.log(devName);
-    if(devName==='WLAN' || devName==='en0') {
+    if(devName==='WLAN' || devName==='en0' || devName==='本地连接 3') {
       var iface = add[devName];
       for (var i = 0; i < iface.length; i++) {
         var alias = iface[i];
@@ -48,12 +47,12 @@ const get_host_ip_mac = () => {
 }
 
 /**
- * 
- * @param {*} deviceNick 
+ *
+ * @param {*} deviceNick
  */
 const register =  async deviceNick => {
-	let deviceMac = get_host_ip_mac().mac;
-	// console.log(mac, deviceNo);
+  let deviceMac = get_host_ip_mac().mac;
+	// console.log(deviceMac);
 	let result = await axios.get(server, {
     params: {
       deviceType,
