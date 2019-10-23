@@ -15,23 +15,23 @@
     "build:linux": "gulp && electron-packager ./ 设备注册助手 --overwrite --platform=linux --arch=x64 --icon=./static/Logo.ico --out=./release --asar.unpack='**/config/config.js' --app-version=0.0.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.4",
+    "@babel/runtime": "^7.6.3",
     "axios": "^0.19.0",
-    "log4js": "^4.4.0"
+    "log4js": "^5.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.5.0",
-    "@babel/preset-env": "^7.5.4",
-    "electron": "^5.0.6",
-    "electron-packager": "^14.0.1",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "electron": "^7.0.0",
+    "electron-packager": "^14.0.6",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-load-plugins": "^2.0.0",
+    "gulp-load-plugins": "^2.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
-    "jest": "^24.8.0"
+    "jest": "^24.9.0"
   },
   "jest": {
     "testRegex": ".*.(test|spec).jsx?$"
